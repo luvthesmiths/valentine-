@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Proposal 🎀</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe6f2;
+            color: #ff4d94;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1s infinite alternate;
+        }
+        @keyframes heartbeat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+        .question {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #ff66b2;
+            color: white;
+        }
+        .yes:hover {
+            font-size: 22px;
+            padding: 15px 30px;
+        }
+        .no {
+            background-color: #fff;
+            color: #ff66b2;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heart">🩷 Will you be my Valentine, Azan? 🎀🤭⭐</h1>
+        <p class="question">You're my favorite person ever! 🎀🩷</p>
+        <div class="buttons">
+            <button class="yes" onclick="yesClicked()">Yes! 🎀</button>
+            <button class="no" id="noButton" onmouseover="moveNo()">No... 🤭</button>
+        </div>
+    </div>
+
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = "<h1>🎀 I love you baby, I hope we can stay every Valentine together! ⭐🩷</h1>";
+        }
+
+        function moveNo() {
+            var button = document.getElementById('noButton');
+            var x = Math.random() * window.innerWidth * 0.7;
+            var y = Math.random() * window.innerHeight * 0.7;
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            alert("Think wisely dawg! 🤭⭐");
+        });
+    </script>
+</body>
+</html>
